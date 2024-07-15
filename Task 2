@@ -33,10 +33,10 @@ multiply : *
 divide: /""")
 while True:       
     try:
-        a = int(input("Enter 1st num:"))
-        b = int(input("Enter 2nd num:"))
-        symbol = str(input("Enter operation:"))
+        a = int(input("Enter num 1: "))
+        b = int(input("Enter num 2: "))
+        symbol = str(input("Enter Operation:"))
     except ValueError:
-        print("Entered invalid input")
+        print("entered invalid input")
     result=caliculator(a,b,symbol)
     print (a,symbol,b,"=",result.recognize())
