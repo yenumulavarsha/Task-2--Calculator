@@ -1,0 +1,42 @@
+class caliculator:
+    def __init__ (self,num1,num2,symbol):    #initializing value
+        self.num1 = num1
+        self.num2 = num2
+        self.symbol=symbol
+        self.result=0
+    def addition (self): #addition of the values
+        self.result = self.num1 + self.num2
+    def substaction (self):  #substaction of the values
+        self.result = self.num1 - self.num2
+    def multiplication (self):   #multiplication of the values
+        self.result = self.num1 * self.num2
+    def division (self):     #division of the values
+        self.result =self.num1 / self.num2
+    def recognize (self):    #recognizing the caliculation function
+        if (self.symbol == "+"):
+            self.addition ()
+            return self.result
+        elif (symbol == "-"):
+            self.substaction ()
+            return self.result
+        elif (symbol == "*"):
+            self.multiplication ()
+            return self.result
+        elif (symbol == "/"):
+            self.division ()
+            return self.result
+        else:
+            print("the given function is invalid or net exicutable")
+print("""add : +
+sub : -
+multiply : *
+divide: /""")
+while True:       
+    try:
+        a = int(input("Enter 1st num:"))
+        b = int(input("Enter 2nd num:"))
+        symbol = str(input("Enter operation:"))
+    except ValueError:
+        print("Entered invalid input")
+    result=caliculator(a,b,symbol)
+    print (a,symbol,b,"=",result.recognize())
